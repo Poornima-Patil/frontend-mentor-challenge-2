@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./ouput.css">
+    <script src="../src/script.js" defer></script>
+</head>
+
+<body>
+    <!--- Mobile navigation section starts here -->
+    <section class="md:hidden">
+        <div class="flex justify-between pt-8">
+
+            <div>
+                <img src="../images/logo.svg" alt="Logo image">
+            </div>
+
+            <div class="absolute rounded-lg min-h-screen right-10 bg-white border-2">
+                <button class="fixed right-8 top-2 dropdown-toggle" type="button" id="dropdownMenuBtn" onClick="changeIcon()">
+                    <img src="../images/icon-menu.svg" alt="Hamburger menu icon">
+                 </button>
+                <button class="fixed right-8 top-2 hidden" id="dropdownCloseBtn" onclick="changeIcon()">
+                    <img src="../images/icon-close-menu.svg">
+                </button>
+
+                <div class="">
+                    <ul class="text-left mt-4 h-full flex-col  fixed-top right-16 pr-28  pl-8 pt-10 font-semibold hidden" id="menuList">
+                        <li class="px-4 dropdown-item ">
+                            <a class="py-2" type="button" href="# " onclick="displayFeaturesMb()">Features<img class="inline px-2" id="features-arrow-mb" src="../images/icon-arrow-down.svg ">
+                            <ul class="-ml-8 pt-2 hidden font-semibold" id="features-menu-mb">
+                            <li class="p-2 "> <img class="inline" src="../images/icon-todo.svg"> To do list</li>
+                            <li class="p-2 "> <img class="inline" src="../images/icon-calendar.svg" > Calendar</li>
+                            <li class="p-2 "> <img class="inline" src="../images/icon-reminders.svg"> Reminders</li>
+                            <li class="p-2 pb-2 "> <img class="inline" src="../images/icon-planning.svg"> Planning</li>
+                            </ul>   
+                        </li>
+                        <li class="px-4 ">
+                        <a class="py-4 dropdown-item" type="button " href="# " onclick="displayCompanyMenuMb()">Company<img class="inline px-2 " src="../images/icon-arrow-down.svg " id="company-arrow-mb"></a>
+                            <ul class="dropdown-menu p-4 -ml-8 mt-4 hidden" id="company-menu-mb">
+                                <li class="p-2 "> History</li>
+                                <li class="p-2 "> Our Team</li>
+                                <li class="p-2 pb-2">Blog</li>
+                            </ul>
+                        </li>
+                        <li class="px-4 py-4">
+                            <a class="dropdown-item" href="# ">Careers</a>
+                        </li>
+                        <li class="px-4 py-4">
+                            <a class="dropdown-item " href="# "> About</a>
+                        </li>
+                        <li class="md:hidden px-16 py-4">
+                            Login
+                        </li>
+
+                        <li class="ml-auto px-16 py-4 border-solid border-2 border-black-900 rounded-xl ">
+                            <a href="# "> Register </a>
+                        </li>
+
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Mobile navigation ends here -->
+
+
+
+    <!-- Desktop Navigation starts here -->
+    <section>
+        <div class="justify-start p-8 hidden md:flex">
+            <!-- Logo section-->
+            <div class="pr-8 ">
+                <img src="../images/logo.svg " alt="Logo image ">
+            </div>
+
+            <ul class="dropdown-menu lg:flex flex-row font-semibold">
+                <li class="px-4 dropdown-item ">
+                    <a class="dropdown-item dropdown-menu dropdown-toggle" type="button" href="#" onclick="displayFeatures()">Features<img class="inline px-2 " id="features-arrow " src="../images/icon-arrow-down.svg ">
+                         <ul class="dropdown-menu p-4 border-2 rounded-lg -ml-16 mt-4 hidden" id="features-menu">
+                            <li class="dropdown-item p-2 "> <img class="inline" src="../images/icon-todo.svg "> To do list</li>
+                            <li class="dropdown-item p-2 "> <img class="inline " src="../images/icon-calendar.svg " > Calendar</li>
+                            <li class="dropdown-item p-2 "> <img class="inline " src="../images/icon-reminders.svg "> Reminders</li>
+                            <li class="dropdown-item p-2 pb-2 "> <img class="inline " src="../images/icon-planning.svg "> Planning</li>
+                         </ul>   
+                </li>
+                <li class="px-4">
+                    <a class="dropdown-item " type="button " href="# " onclick="displayCompanyMenu()">Company<img class="inline px-2 " src="../images/icon-arrow-down.svg " id="company-arrow "></a>
+                    <ul class="dropdown-menu p-4 border-2 rounded-lg -ml-8 mt-4 hidden " id="company-menu">
+                        <li class="p-2 "> History</li>
+                        <li class="p-2 "> Our Team</li>
+                        <li class="p-2 pb-2">Blog</li>
+                    </ul>
+                </li>
+                <li class="px-4 ">
+                    <a class="dropdown-item " href="# ">Careers</a>
+                </li>
+                <li class="px-4 ">
+                    <a class="dropdown-item " href="# "> About</a>
+                </li>
+            </ul>
+            <div class="justify-self-end ml-auto">
+                <span class="px-4"> Login </span>
+                <span class="px-16 py-4 border-solid border-2 border-black-900 rounded-xl"> Register </span>
+            </div>
+
+
+        </div>
+    </section>
+
+
+    <div class="flex flex-wrap-reverse gap-2 pt-16">
+        <div class="basis-1/2 ">
+            <p class="pl-8 pt-16 text-8xl "> Make <br> remote work </p>
+            <p class="pt-16 pl-16 pr-28 text-xl "> Get your team in sync, no matter your location. Streamline processes, create team rituals, and watch productivity soar.
+            </p>
+            <div class="pl-16 pt-16 ">
+                <button type="button " id="learnMoreBtn " class="px-8 py-4 font-bold border-2 text-white bg-gray-900 border-black-600 rounded-lg hover:text-black hover:bg-white "> Learn More</button>
+            </div>
+            <div class="flex pt-64 ">
+                <div class="pl-4 px-4 ">
+                    <img src="../images/client-databiz.svg ">
+                </div>
+                <div class="px-4 ">
+                    <img src="../images/client-audiophile.svg ">
+                </div>
+                <div class="px-4 ">
+                    <img src="../images/client-meet.svg ">
+                </div>
+                <div class="px-4 ">
+                    <img src="../images/client-maker.svg ">
+                </div>
+            </div>
+        </div>
+
+        <div class="m-12 max-h-md max-w-md ">
+            <img class="h-auto " src="../images/image-hero-desktop.png ">
+        </div>
+    </div>
+</body>
+
+
+
+</html>
